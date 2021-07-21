@@ -10,8 +10,9 @@ const binarySearch = (list, item) => {
   let high = list.length - 1;
 
   while (low <= high) {
-    const mid = low + high;
+    const mid = Math.floor((low + high) / 2);
     const currentItem = list[mid];
+
     if (item === currentItem) return item;
 
     currentItem > item ? (high = mid - 1) : (low = mid + 1);
