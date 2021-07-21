@@ -14,3 +14,23 @@ const countDown = (i) => {
   countDown(i - 1); // Recursive Case when Function call it Self Again
 };
 ```
+
+### Stack
+
+Stack on of the Most Common Data Structure you've been using Whole Time Without Realizing it
+Like **Call Stack** <br/>
+Stack is simple Data Structure When Contains of Two Actions
+
+- Push: add New Item to The Top
+- Pop: Remove the Topmost item and Read it
+
+##### Call Stack With Recursion
+
+Recursive Functions use The Call Stack E.G Factorial
+
+```javascript
+const factorial = (num) => {
+  if (num === 1) return 1;
+  return num * factorial(num - 1);
+};
+```
