@@ -11,7 +11,7 @@ const quickSort = (array) => {
   const lessThanPivot = array.slice(1).filter((e) => e <= pivot); // Sub Array Of All Element Less Than Pivot
   const greaterThanPivot = array.slice(1).filter((e) => e > pivot); // Sub Array Of All Element Greater Than Pivot
 
-  return quickSort(lessThanPivot).concat([pivot], quickSort(greaterThanPivot));
+  return [...quickSort(lessThanPivot), pivot, ...quickSort(greaterThanPivot)];
 };
 
 console.log(quickSort([10, 5, 2, 3]));
