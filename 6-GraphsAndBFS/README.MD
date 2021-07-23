@@ -17,3 +17,15 @@ it Can Help Answer two Types of Questions
 
 - is There a path from node A to Node B
 - What is the shortest path from Node A To Node B
+
+## Use Cases
+
+- Wrute Checkers AI That Calculate Fewest Moves to Victory
+- Spell Checker
+- Closest Doctor in your Network
+- Shortest Path to your Friend
+
+## Steps Is Easy
+
+- Model Problem as A Graph Data Structure
+- Solve the Problem Using **DFS**
