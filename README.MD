@@ -1,6 +1,6 @@
 # Algorithms and Data Structure
 
-## Recursion
+## 3-Recursion
 
 Every Recursion Function Has Two Parts [The Base Case , The Recursive Case] <br/>
 
@@ -47,7 +47,7 @@ Each Graph is Made of (Nodes & Edges) Node Connected to Many Other Nodes Those N
 
 Two Nodes Directly Connected to Each Other
 
-## BFS (Breadth First Search)
+## 6-BFS (Breadth First Search)
 
 We have Seen Sequential Search and Binary Search But BFS Is a Different Kind Of Search Algorithm that runs
 on Graphs. <br/>
