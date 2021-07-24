@@ -85,3 +85,14 @@ const BFS = (baseName) => {
 };
 console.log(BFS('you'));
 ```
+
+### Running Time
+
+- If we Search all Edges or People in the Grap it will Take O(number of Edges)
+- Adding Person to Queue Takes O(1) So we have N of Persons it Takes O(number of People)
+
+So Here we Can Express The Running Time as O(number of People + number Of Edges) <br/>
+it's More Commonly Written as O(V+E)
+
+**V**: Number of Vertices
+**E**: Number of Edges
