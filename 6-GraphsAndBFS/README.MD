@@ -41,3 +41,47 @@ There is Question we Must Ask Before we find Shortest Path
 
 You Must Search People or Nodes in the Order They're Added There is a Data Structure to Handle the Order for this
 For Sure it's Called Queue (First in First Out)
+
+## Implementation Of Breadth-First Search
+
+#### 1-Implement a Graph
+
+Implement a Graph To Express Relationships Between Nodes we're Using Hash Table that Allows us to Map Key Value Pairs E.G
+
+```javascript
+const graph = {};
+graph['you'] = ['alice', 'bob', 'claire'];
+graph['bob'] = ['anuj', 'peggy'];
+graph['alice'] = ['peggy'];
+graph['claire'] = ['thom', 'jonny'];
+```
+
+#### 2-Implement BFS Algorithm With Queue
+
+1. Keep Queue Containing The People To Check (To Make Sure the Order is Fine)
+2. Pop a Person or Node From the Queue
+3. Check if This Person is what we need or Not ? if Yes >> We're Done Here if No ? Let's go to Next Steps
+4. Add all Their Neighbors To The Queue
+5. Repeat The Previous Steps with the New Neighbors
+6. If Queue is Empty So There is no Node that we want
+
+```javascript
+const BFS = (baseName) => {
+  let search_queue = [...graph[baseName]]; // 1-Keep Queue Containing The People To Check
+  const searched = []; // keep track of which people you've searched before.
+  while (search_queue.length > 0) {
+    const person = search_queue.shift(); // 2- Pop a Person or Node From the Queue
+    if (searched.indexOf(person) !== -1) continue; // 3- Check if This Person is what we need or Not?
+
+    if (isSeller(person)) {
+      // 3- If Seller Just Return True
+      console.log(`${person} Is a Seller`);
+      return true;
+    }
+    search_queue = [...search_queue, ...graph[person]]; // 4- Add all Their Neighbors To The Queue
+    searched.push(person); // Mark This Person as Searched Criteria
+  }
+  return false; // 6- If Queue is Empty So There is no Node that we want
+};
+console.log(BFS('you'));
+```
