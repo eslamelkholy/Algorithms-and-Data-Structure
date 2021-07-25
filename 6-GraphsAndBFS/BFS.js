@@ -15,7 +15,7 @@ const BFS = (baseName) => {
   const searched = []; // keep track of which people you've searched before.
   while (search_queue.length > 0) {
     const person = search_queue.shift();
-    if (searched.indexOf(person) !== -1) continue;
+    if (searched.includes(person)) continue;
 
     if (isSeller(person)) {
       console.log(`${person} Is a Seller`);
