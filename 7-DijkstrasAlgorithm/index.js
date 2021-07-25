@@ -27,7 +27,7 @@ parents['a'] = 'start';
 parents['b'] = 'start';
 parents['fin'] = null;
 
-let processed = [];
+let visited = [];
 ////////////////////////////////////////////////////////
 
 const dijkstraAlgorithm = () => {
@@ -46,8 +46,8 @@ const dijkstraAlgorithm = () => {
         parents[n] = node;
       }
     });
-    // Mark the node as processed
-    processed.push(node);
+    // Mark the node as visited
+    visited.push(node);
     // Find the next node to process, and loop
     node = findLowestCostNode(costs);
   }
@@ -65,8 +65,8 @@ function findLowestCostNode(costs) {
   // Go through each node
   for (let node in costs) {
     const cost = costs[node];
-    // If it's the lowest cost so far and hasn't been processed yet...
-    if (cost < lowestCost && !processed.includes(node)) {
+    // If it's the lowest cost so far and hasn't been visited yet...
+    if (cost < lowestCost && !visited.includes(node)) {
       // ... set it as the new lowest-cost node.
       lowestCost = cost;
       lowestCostNode = node;
